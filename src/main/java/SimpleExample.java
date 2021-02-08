@@ -15,24 +15,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.graphhopper.jsprit.examples;
 
-import com.graphhopper.jsprit.analysis.toolbox.GraphStreamViewer;
-import com.graphhopper.jsprit.analysis.toolbox.GraphStreamViewer.Label;
-import com.graphhopper.jsprit.analysis.toolbox.Plotter;
-import com.graphhopper.jsprit.core.algorithm.VehicleRoutingAlgorithm;
-import com.graphhopper.jsprit.core.algorithm.box.Jsprit;
-import com.graphhopper.jsprit.core.problem.Location;
-import com.graphhopper.jsprit.core.problem.VehicleRoutingProblem;
-import com.graphhopper.jsprit.core.problem.job.Service;
-import com.graphhopper.jsprit.core.problem.solution.VehicleRoutingProblemSolution;
-import com.graphhopper.jsprit.core.problem.vehicle.VehicleImpl;
-import com.graphhopper.jsprit.core.problem.vehicle.VehicleImpl.Builder;
-import com.graphhopper.jsprit.core.problem.vehicle.VehicleType;
-import com.graphhopper.jsprit.core.problem.vehicle.VehicleTypeImpl;
-import com.graphhopper.jsprit.core.reporting.SolutionPrinter;
-import com.graphhopper.jsprit.core.util.Solutions;
-import com.graphhopper.jsprit.io.problem.VrpXMLWriter;
+import jsprit.analysis.toolbox.GraphStreamViewer;
+import jsprit.analysis.toolbox.GraphStreamViewer.Label;
+import jsprit.analysis.toolbox.Plotter;
+import jsprit.core.algorithm.VehicleRoutingAlgorithm;
+import jsprit.core.algorithm.box.Jsprit;
+import jsprit.core.problem.Location;
+import jsprit.core.problem.VehicleRoutingProblem;
+import jsprit.core.problem.job.Service;
+import jsprit.core.problem.solution.VehicleRoutingProblemSolution;
+import jsprit.core.problem.vehicle.VehicleImpl;
+import jsprit.core.problem.vehicle.VehicleImpl.Builder;
+import jsprit.core.problem.vehicle.VehicleType;
+import jsprit.core.problem.vehicle.VehicleTypeImpl;
+import jsprit.core.reporting.SolutionPrinter;
+import jsprit.core.util.Solutions;
+//import jsprit.io.problem.VrpXMLWriter;
+
 
 import java.io.File;
 import java.util.Collection;
@@ -99,7 +99,7 @@ public class SimpleExample {
 		 */
         VehicleRoutingProblemSolution bestSolution = Solutions.bestOf(solutions);
 
-        new VrpXMLWriter(problem, solutions).write("output/problem-with-solution.xml");
+//        new VrpXMLWriter(problem, solutions).write("output/problem-with-solution.xml");
 
         SolutionPrinter.print(problem, bestSolution, SolutionPrinter.Print.VERBOSE);
 
